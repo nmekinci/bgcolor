@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Chage My bg Color</title>
   </head>
-  <body>
+  <body onload="click()">
     <main>
       <section id="click" class="container">
         <p class="click__p">click me</p>
@@ -26,23 +26,27 @@
       clText.appendChild(clColor);
       ovText.appendChild(ovColor);
 
-      cl.onclick = () => {
+      cl.onclick = click
+      function click() {
         let r = Math.floor(Math.random() * 255);
         let g = Math.floor(Math.random() * 255);
         let b = Math.floor(Math.random() * 255);
         document.getElementById("click").style.backgroundColor =
           "rgb(" + r + "," + g + "," + b + ")";
-        clText.innerHTML =
+        clText.textContent =
           document.getElementById("click").style.backgroundColor;
       };
 
-      ov.onmouseover = () => {
+
+      ov.onmouseout = over
+      ov.onmouseover = over
+      function over () {
         let r = Math.floor(Math.random() * 255);
         let g = Math.floor(Math.random() * 255);
         let b = Math.floor(Math.random() * 255);
         document.getElementById("over").style.backgroundColor =
           "rgb(" + r + "," + g + "," + b + ")";
-        ovText.innerHTML =
+        ovText.textContent =
           document.getElementById("over").style.backgroundColor;
       };
     </script>
