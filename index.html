@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chage My bg Color</title>
+</head>
+<body>
+    <main>
+    <section class="click container">
+        <p class="click__p">click me</p>
+
+    </section>
+    <section class="over container">
+        <p class="over__p">mouse over</p>
+    </section>
+    </main>
+    <script>
+        const cl = document.getElementsByClassName("click");
+        const ov = document.getElementsByClassName("over");
+        let clText = document.getElementsByClassName("click__p");
+        let ovText = document.getElementsByClassName("over__p");
+        let clColor = document.createElement("p");
+        let ovColor = document.createElement("p");
+        clText.appendChild(clColor);
+        ovText.appendChild(ovColor);
+
+cl.onclick = () => {
+    let r = Math.floor(Math.random()*255);
+    let g = Math.floor(Math.random()*255);
+    let b = Math.floor(Math.random()*255);
+    document.cl.style.backgroundColor = "rgb("+r+","+g+","+b+")";
+    clText.innerHTML = document.cl.style.backgroundColor;
+}
+
+    </script>
+</body>
+</html>
